@@ -1,0 +1,15 @@
+media/
+media.zip
+.venv/
+__pycache__/
+.env
+db.sqlite3media.zip
+media/
+.venv/
+media/
+.venv/
+__pycache__/
+*.pyc
+db.sqlite3
+.env
+

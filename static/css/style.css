@@ -1,0 +1,210 @@
+/* ===================== ROOT ===================== */
+:root {
+    --bg: #0b0b0f;
+    --panel: #14141c;
+    --panel-2: #1c1c26;
+    --text: #ffffff;
+    --muted: #b3b3b3;
+    --red: #e50914;
+    --border: rgba(255,255,255,0.08);
+}
+
+/* ===================== BASE ===================== */
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+}
+
+/* ===================== SIDEBAR ===================== */
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 240px;
+    height: 100vh;
+    background: var(--panel);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-right: 1px solid var(--border);
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--red);
+    margin-bottom: 10px;
+}
+
+.sidebar button {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: 0.2s;
+}
+
+.sidebar button:hover {
+    background: var(--red);
+    border-color: var(--red);
+}
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+/* ===================== CONTENT ===================== */
+.content {
+    margin-left: 240px;
+    padding: 25px;
+}
+
+/* ===================== TOPBAR ===================== */
+.topbar {
+    background: var(--panel);
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    border: 1px solid var(--border);
+}
+
+/* ===================== SECTIONS ===================== */
+section {
+    background: var(--panel);
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--border);
+    margin-bottom: 20px;
+}
+
+/* ===================== FORMS ===================== */
+.form {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+input, select {
+    background: var(--panel-2);
+    border: 1px solid var(--border);
+    color: var(--text);
+    padding: 10px;
+    border-radius: 8px;
+    outline: none;
+}
+
+input:focus, select:focus {
+    border-color: var(--red);
+}
+
+button {
+    background: var(--red);
+    border: none;
+    color: white;
+    padding: 10px 14px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+/* ===================== FILTERS ===================== */
+.filters {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-bottom: 15px;
+}
+
+/* ===================== TABLE ===================== */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+th, td {
+    padding: 12px;
+    border-bottom: 1px solid var(--border);
+    text-align: left;
+}
+
+th {
+    background: var(--panel-2);
+    color: var(--muted);
+}
+
+tr:hover {
+    background: rgba(229, 9, 20, 0.08);
+}
+
+/* ===================== IMAGE ===================== */
+.poster {
+    width: 60px;
+    border-radius: 6px;
+}
+
+/* ===================== VIDEO ===================== */
+video {
+    border-radius: 8px;
+    border: 1px solid var(--border);
+}
+
+/* ===================== ACTION BUTTONS ===================== */
+.edit {
+    background: #f5c518;
+    color: black;
+}
+
+.delete {
+    background: #ff3b30;
+}
+
+.edit:hover, .delete:hover {
+    opacity: 0.8;
+}
+
+/* ===================== HIDDEN ===================== */
+.hidden {
+    display: none;
+}
+
+/* ===================== SCROLL ===================== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+@media (max-width: 768px) {
+
+    .sidebar {
+        width: 100%;
+        position: relative;
+    }
+
+    .content {
+        margin-left: 0;
+    }
+
+    table {
+        font-size: 12px;
+    }
+
+    video, img {
+        width: 100%;
+        max-width: 120px;
+    }
+}

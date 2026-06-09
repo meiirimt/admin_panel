@@ -1,0 +1,62 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movies Admin</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+
+<div class="sidebar">
+    <h2>🎬 Admin</h2>
+
+    <button id="genresBtn">Genres</button>
+    <button id="moviesBtn">Movies</button>
+
+    <button id="logoutBtn">Logout</button>
+</div>
+
+<div class="content">
+
+    <!-- GENRES -->
+    <section id="genresSection">
+        <h2>Genres</h2>
+
+        <input id="genreName" placeholder="Name">
+        <input id="genreDescription" placeholder="Description">
+        <button onclick="createGenre()">Add</button>
+
+        <table>
+            <tbody id="genresTable"></tbody>
+        </table>
+    </section>
+
+    <!-- MOVIES -->
+    <section id="moviesSection" style="display:none;">
+        <h2>Movies</h2>
+
+        <input id="movieTitle" placeholder="Title">
+        <input id="movieDescription" placeholder="Description">
+        <input id="movieYear" placeholder="Year">
+
+        <select id="movieGenre"></select>
+
+        <input type="file" id="moviePoster">
+        <input type="file" id="movieTrailer">
+
+        <button onclick="createMovie()">Add</button>
+
+        <table>
+            <tbody id="moviesTable"></tbody>
+        </table>
+    </section>
+
+</div>
+
+<script src="{% static 'js/app.js' %}"></script>
+
+</body>
+</html>
